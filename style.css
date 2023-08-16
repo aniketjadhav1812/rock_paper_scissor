@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Baloo+Bhaina+2:wght@700&family=Caprasimo&family=Courgette&family=Merienda:wght@700&family=Pattaya&family=Poppins:wght@500&family=Roboto&family=Russo+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(178, 123, 230);
+}
+#nav{
+    width: 100%;
+    height: 10%;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Baloo Bhai 2';
+    font-size: 3.2vw;
+    letter-spacing: 8px;
+}
+#container{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#gameContainer{
+    width: 60%;
+    height: 90%;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: linear-gradient(rgb(82, 254, 228),rgb(238, 0, 242)),blueviolet;
+    flex-direction: column;
+}
+#info{
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    row-gap: 60px;
+    flex-direction: column;
+    position: absolute;
+    background: linear-gradient(45deg, cyan , rgb(255, 2, 255));
+    z-index: 999;
+}
+#info h2{
+    font-family: Merienda;
+    font-size: 4vw;
+    font-weight: 700;
+}
+#play-again{
+    text-align: center;
+    font-family: Poppins ;
+    padding: 6px 30px;
+    border-radius: 50px;
+    font-size: 3vw;
+    background:linear-gradient(45deg,rgb(255, 2, 255), cyan);
+}
+#play-again:hover{
+    background:linear-gradient(45deg,rgba(255, 2, 255), rgba(0, 255, 255),);
+    opacity: .7;
+}
+#start{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: linear-gradient(to left , rgb(30, 169, 255),rgb(225, 0, 255),rgb(30, 169, 255));
+    z-index: 99;
+}
+#play{
+    text-align: center;
+    padding: 5px 25px;
+    font-size: 6vw;
+    border: 3px solid rgb(155, 70, 234);
+    border-radius: 55px;
+    font-family: Caprasimo;
+    font-weight: 300;
+}
+#play:hover{
+    color: aliceblue;
+    background-color: rgb(178, 123, 230);
+    
+}
+
+#animate{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 55%;
+}
+.text{
+    display: flex;
+    width: 50%;
+    height: 10%;
+    position: absolute;
+    top: 10%;
+    justify-content: space-between;
+}
+.text h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 40%;
+}
+#animation{
+    width: 55%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    column-gap: 10%;
+}
+#fist-left{
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 45%;
+    animation: updown1 1s linear  infinite;
+}
+#fist-left i{
+    rotate: 90deg;
+    font-size: 10vw;
+    color: rgb(0, 24, 66);
+}
+#fist-right i{
+    rotate: -90deg;
+    font-size: 10vw;
+}
+#fist-right{
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 45%;
+    /* background-color: tomato; */
+    animation: updown2 1s linear  infinite;
+}
+#select{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 5vw;
+    flex-basis: 45%;
+}
+.option{
+    width: 10vw;
+    height: 10vw;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgb(176, 86, 250),rgb(91, 255, 255));
+    
+}
+.option:hover{
+    background: linear-gradient(rgb(123, 54, 241),rgb(91, 255, 250));
+}
+.option i{
+    font-size: 8.6vw;
+}
+@keyframes updown1{
+    0%{
+        rotate: 10deg;
+        transform: translateY(10px);
+    }
+    50%{
+        rotate: -30deg;
+        transform: translateX(-10px);
+    }
+    100%{
+        rotate: 10deg;
+        transform: translateY(10px);
+    }
+}
+@keyframes updown2{
+    0%{
+        rotate: -10deg;
+        transform: translateY(10px);
+    }
+    50%{
+        rotate: 30deg;
+        transform: translateX(-10px);
+    }
+    100%{
+        rotate: -10deg;
+        transform: translateY(10px);
+    }
+}
+
+@media (max-width:500px){
+    #gameContainer{
+        width: 90%;
+        height: 90%;
+    }
+    #info h2{
+        font-family: Merienda;
+        font-size: 8vw;
+        font-weight: 800;
+    }
+    #play-again{
+        font-size: 4vw;
+    }
+    #animation{
+        width: 75%;
+        height: 90%;
+        display: flex;
+        align-items: center;
+        column-gap: 10%;
+    }
+    #fist-left i{
+        font-size: 19vw;
+    }
+    #fist-right i{
+        font-size: 19vw;
+    }
+    .option{
+        width: 13vw;
+        height: 13vw;
+    }
+}
